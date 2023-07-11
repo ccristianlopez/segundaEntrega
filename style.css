@@ -1,0 +1,74 @@
+.titulo{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+nav {
+    background: white;
+    height: 5rem;
+  }
+  
+  nav .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 25px;
+    margin: 4px;
+    font-size: 15px;
+    font-family: 'Varela Round', sans-serif;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  nav .menu a {
+    color: black;
+    padding: 20px;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  nav li {
+    padding-bottom: 13px;
+  }
+
+  .cuerpo{
+    padding-top: 100px;
+  }
+
+  main .container {
+    padding-top: 5rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+
+  main .box-contact {
+    text-align: center;
+  }
+  
+  main .texto-contact {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Shippori Antique B1', sans-serif;
+  }
+
+  footer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 25px;
+    margin: 4px;
+    font-size: 13px;
+    font-family: 'Varela Round', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: darkolivegreen;
+  }
