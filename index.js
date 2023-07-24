@@ -1,21 +1,21 @@
 //"use strict";
-nombre=prompt("BIENVENIDO A LA PAGINA DEL TERMO\nIngrese su nombre.");
-  while (nombre=="") {
-    nombre=prompt("Este nombre no esta permitido. Ingrese nuevamente su nombre.");
-  }
-let argentino=prompt("Bienvenido "+nombre+". ¿Eres de la Republica Argentina?");
-if (argentino=="no") {
-    alert(nombre+". Lamentablemente los productos solo estan disponibles para la Republica Argentina.")    
-}
-else{
-        let mail=prompt(nombre+". Por favor, ingrese su mail para enviarle si factura de compra.").toLowerCase();
-    while (mail=="") {
-        mail=prompt("Correo no permitido. Por favor ingrese nuevamente su correo electronico.");
-    }
-    function darGracias() {
-       console.log(`¡Muchas gracias!`);
-}
-darGracias();
+//nombre=prompt("BIENVENIDO A LA PAGINA DEL TERMO\nIngrese su nombre.");
+//  while (nombre=="") {
+//    nombre=prompt("Este nombre no esta permitido. Ingrese nuevamente su nombre.");
+//  }
+//let argentino=prompt("Bienvenido "+nombre+". ¿Eres de la Republica Argentina?");
+//if (argentino=="no") {
+//    alert(nombre+". Lamentablemente los productos solo estan disponibles para la Republica Argentina.")    
+//}
+//else{
+//        let mail=prompt(nombre+". Por favor, ingrese su mail para enviarle si factura de compra.").toLowerCase();
+//    while (mail=="") {
+//        mail=prompt("Correo no permitido. Por favor ingrese nuevamente su correo electronico.");
+//    }
+//    function darGracias() {
+//       console.log(`¡Muchas gracias!`);
+//}
+//darGracias();
 
 const producto1={
   nombre: "Termo acero inoxidable",
@@ -167,58 +167,141 @@ const producto10={
   precio:10000
 };
 
-const termos=[producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9, producto10];
+//const termos=[producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8, producto9, producto10];
+
+
 
 //ARRAY METHOD PARA FILTRAR STOCK MAYOR A 6
-let mayorAseis;
-mayorAseis= termos.filter( producto => producto.stock>= 6);
-console.log(mayorAseis);
+//let mayorAseis;
+//mayorAseis= termos.filter( producto => producto.stock>= 6);
+//console.log(mayorAseis);
 
 
 //FOR PARA MOSTRAR SOLO EL NOMBRE DE CADA OBJETO DEL ARRAY//
 
-for(let i=0;i<termos.length;i++){
-  console.log(`NOMBRE: ${termos[i].nombre} ---> PRECIO: $${termos[i].precio}`);
-}
+//for(let i=0;i<termos.length;i++){
+//  console.log(`NOMBRE: ${termos[i].nombre} ---> PRECIO: $${termos[i].precio}`);
+//}
 
 
 //FUNCION//
 //console.log(producto2);
-producto3.mostrarInfo();
+//producto3.mostrarInfo();
 
-//Usando for en un array//
+//EVENTOS
 
-//let meses=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio"];
+//const nav=document.querySelector(`nav`)
 
-//meses.push("Julio");
+//nav.addEventListener(`mouseout`,()=>{
+//console.log(`Saliendo del nav`)
+//})
+
+//nav.addEventListener(`mouseenter`,()=>{
+//  console.log(`Entrando al nav`)
+//})
+
+//nav.addEventListener(`click`,()=>{
+//  console.log(`Hiciste click`)
+//})
+
+//EVENTO PARA SCROLLEAR
+
+//window.addEventListener(`scroll`, ()=>{
+ // console.log(`Scrolling...`)
+//});
+
+//VARIABLES
+const carrito= document.querySelector(`#carrito`);
+const contenedorCarrito= document.querySelector(`#lista-carrito tbody`);
+const vaciarCarritoBtn=document.querySelector(`#vaciar-carrito`);
+const listaTermos= document.querySelector(`#lista-termos`);
+const seleccionarTermo= document.querySelector(`#lista-termos`);
+let articulosCarrito=[];
 
 
-//console.log(meses);
-//console.table(meses);
-
-//console.log(`La cantidad de meses del Array son: ${meses.length}`);
-
-//for(let i=0;i<=meses.length;i++){
-//console.log(meses[i]);
-//}
 
 
-//EJEMPLO DE IR SUMANDO A UN CARRITO DE COMPRAS:
+cargarEventListeners();
+function cargarEventListeners(){
+  seleccionarTermo.addEventListener(`click`, agregarTermo);
 
-let total= 0
-function agregarCarrito(preci0) {
-    return total += preci0;
+  
+
+
+  //Muestra los cursos de Local storage
+  document.addEventListener(`DOMContentLoaded`, ()=>{
+    articulosCarrito=JSON.parse(localStorage.getItem(`carrito`)) || [];
+    carritoHtml();
+  })
 }
 
-function calcularImpuesto(total) {
-    return total += 1.15;
+
+//FUNCIONES
+function agregarTermo(e){
+  if(e.target.classList.contains(`btn-primary`)){
+  const termoSeleccionado= e.target.parentElement;
+  leerDatosTermo(termoSeleccionado)
+  };
+}  
+
+//LEER el contenido del html al que lé dimos click
+function leerDatosTermo(termo){
+  //console.log(termo)
+
+
+  const infoTermo={
+  nombre: termo.querySelector(`strong`).textContent,
+  precio: termo.querySelector(`span`).textContent,
+  cantidad: 1
+  }
+
+  //Revisa si un elemento ya existe en un carrito
+  const existe= articulosCarrito.some
+
+  //Agrega elementos al array carrito 
+  articulosCarrito=[...articulosCarrito, infoTermo];
+
+  console.log(articulosCarrito);
+
+carritoHtml();
 }
 
-total= agregarCarrito(producto1.precio);
-total= agregarCarrito(producto2.precio);
-total= agregarCarrito(producto3.precio);
 
-const totalaPagar= calcularImpuesto(total);
+//Muestra de carrito de compras en el HTML
+function carritoHtml(){
 
-console.log(`El total a pagar es de $${totalaPagar}. Impuestos incluidos.`);
+  limpiarHtml();
+
+  //Recorre el carrito y genera el HTML
+  articulosCarrito.forEach(termo=>{
+    const row= document.createElement(`tr`);
+    row.innerHTML=`
+    <td>
+        ${termo.nombre}
+    </td>
+    <td>
+        ${termo.precio}
+    </td>
+    <td>
+        ${termo.cantidad}
+    </td>
+    <td>
+        <a href="#" class="button u-full-whidth"> >Eliminar<
+    </td>
+    `;
+
+  //Agrega el html en el carrito en tbody
+  contenedorCarrito.appendChild(row);
+  })
+
+  //Agregar el carrito de compras al storage
+  sicronizarStorage();
+
+}
+function sicronizarStorage(){
+  localStorage.setItem(`carrito`, JSON.stringify(articulosCarrito));
+  }
+  //Elimina los termos del tbody
+  function limpiarHtml(){
+  contenedorCarrito.innerHTML=``;
 }

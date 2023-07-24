@@ -1,11 +1,25 @@
 .titulo{
+  padding-top: 1.50rem;
+  
     text-align: center;
-    font-size: 30px;
+    font-size: 22px;
     font-family: 'Open Sans', sans-serif;
+    position: fixed;
+    background-color: white;
+    width: 70%;
 }
+.tittle{
+  
+  margin-right: 15rem;
+  padding-bottom: 60px;
+}
+
 nav {
-    background: white;
     height: 5rem;
+    position: fixed;
+    width: 100%;
+    padding-top: 9rem;
+    
   }
   
   nav .menu {
@@ -15,12 +29,15 @@ nav {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 25px;
-    margin: 4px;
+    margin-top: -0.50rem;
+    width: 80%;
+    
     font-size: 15px;
     font-family: 'Varela Round', sans-serif;
     list-style: none;
     text-decoration: none;
+    background-color: white
+    
   }
   
   nav .menu a {
@@ -39,22 +56,51 @@ nav {
   }
 
   main .container {
-    padding-top: 5rem;
+    padding-top: 10rem;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
+    width: 60%;
+    
+   
   }
 
   main .box-contact {
+    border: 1px solid #aaaaaa;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 4rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
+    -webkit-box-shadow: 1px 5px #d8d8d8;
+    box-shadow: 1px 5px #d8d8d8;
     text-align: center;
+    padding-bottom: 5rem;
+    height:80%;
   }
   
   main .texto-contact {
-    padding: 20px;
+    padding: 3px;
     text-align: center;
     font-size: 18px;
     font-family: 'Shippori Antique B1', sans-serif;
+  }
+
+  #lista-termos{
+    display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 82% 17%;
+      grid-template-columns: 70% 30%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 30px;
   }
 
   footer{
@@ -72,3 +118,45 @@ nav {
     text-decoration: none;
     color: darkolivegreen;
   }
+
+  #jbl{
+    padding-top: 200px;
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+  #jbl-mensaje{
+    padding-top: 25px;
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+
+#lista-carrito{
+  position: fixed;
+  padding-top: 200px;
+  margin-right: 3rem;
+}
+
+th{
+  padding-left: 1rem;
+}
+
+#vaciar-carrito{
+  margin-top: 35rem;
+  position: fixed;
+  
+}
+
+tbody{
+  font-size: 14px;
+  color: gray;
+  text-align: center;
+}
+
+.button-u-full-whidth{
+  color: red;
+}
+
+#btn-enviar{
+  padding-top: 2rem;
+  padding-left: 12rem;
+}
