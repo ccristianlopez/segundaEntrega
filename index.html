@@ -8,120 +8,128 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dangrek&family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="titulo">
-            <div class="tittle">
-                <h1>La pagina del termo</h1>
+        <div class="box-header">
+            <div class="titulo">
+                <h1>TERMOS.COM</h1>
             </div>
-            
+            <div class="menu">
+                <ul class="menu-info">
+                    <li><a class="navi" href="">Inicio</a></li>
+                    <li><a class="navi" href="">Quienes somos</a></li>
+                    <li><a class="navi" href="">Preguntas frecuentes</a></li>
+                    <li><a class="navi" href="contactanos.html">Contactanos</a></li>
+                </ul>
+            </div>
         </div>
-    </header>   
+    </header>
     <nav>
-        
-    
-            <ul class="menu">
-                <li><a class="" href="">Inicio</a></li>
-                <li><a class="" href="">Quienes somos</a></li>
-                <li><a class="" href="">Preguntas frecuentes</a></li>
-                <li><a class="" href="contactanos.html">Contactanos</a></li>
-            </ul>
+        <div class="fondo-img">
+                <img src="img termos/termo-portada.jpg" alt="" width="100%" height="200rem">
+            <div class="text">
+                <div class="tienda-p"><p class="tienda-p">TIENDA</p></div>
+                <div class="inicio-p"><P class="inicio-p">INICIO</P></div>
+            </div>
+        </div> 
     </nav>
     <main>
-        <div id="lista-termos">
-            <div class="container">
-                <div id="termo"class="box-contact">
-                   <img src="./img termos/termoacero.img.webp" alt="" width="100%">
-                   <p class="texto-contact"><strong>Termo acero inoxidable</strong></p>
-                   <p class="texto-contact">Capacidad: 1 Litro.  Pico cebador: Si</p>
-                   <p class="texto-contact"><span>$12.000</span></p>
-                   <button type="button" id="agregar-termo" class="btn btn-primary">Agregar al carrito</button>
-                </div>
-                <div id="termo" class="box-contact">
-                  <img src="./img termos/termomessi.img" alt="" width="100px" height="240px">
-                  <p class="texto-contact"><strong>Termo acero inoxidable estapado Messi</strong></p>
-                  <p class="texto-contact">Capacidad: 1 Litro.  Pico cebador: Si</p>
-                  <p class="texto-contact"><span>$15.000</span></p>
-                  <button type="button" id="agregar-termo" class="btn btn-primary">Agregar al carrito</button>
+        <div class="super-box">
+            <div id="lista-termos" class="listas-de-termos"> 
+                <div  class="box-contact">
+                    <img src="img termos/termonegro.img" alt="" width="100%">
+                    <p class="texto-contact"><strong>Termo acero inoxidable</strong></p>
+                    <p class="texto-contact"><div class="envio"><strong>ENVIO GRATIS</strong></div></p>
+                    <p class="texto-contact"><span>$15.000</span></p>
+                    <button type="button" class="btn btn-danger" data-id="1">Agregar al carrito</button>
                 </div>
                 <div class="box-contact">
-                  <img src="./img termos/termodibu.img" alt="" width="100%">
-                  <p class="texto-contact"><strong>Termo acero inoxidable estampado Dibu Martinez</strong></p>
-                  <p class="texto-contact" >Capacidad: 1 Litro.  Pico cebador: Si</p>
-                  <p class="texto-contact"><span>$15.000</span></p>
-                  <button type="button" id="agregar-termo" class="btn btn-primary">Agregar al carrito</button>
+                    <img src="img termos/mezi.img" alt="" width="100%">
+                    <p class="texto-contact"><strong>Termo acero inoxidable estapado Messi</strong></p>
+                    <p class="texto-contact"><div class="envio"><strong>ENVIO GRATIS</strong></div></p>
+                    <p class="texto-contact"><span>$15.000</span></p>
+                    <button type="button" class="btn btn-danger" data-id="2">Agregar al carrito</button>
                 </div>
                 <div class="box-contact">
-                  <img src="./img termos/termoverdeagua.img" alt="" width="100%">
-                  <p class="texto-contact"><strong>Termo simil Lumilagro verde agua</strong></p>
-                  <p class="texto-contact">Capacidad:   Medio litro.  Pico cebador: Si</p>
-                  <p class="texto-contact"><span>$10.000</span></p>
-                  <button type="button" id="agregar-termo" class="btn btn-primary">Agregar al carrito</button>
-              </div>
-              <div class="box-contact">
-                <img src="./img termos/termoazulclaro.img" alt="" width="100%">
-                <p class="texto-contact"><strong>Termo simil Lumilagro azul claro</strong></p>
-                <p class="texto-contact">Capacidad:   Medio litro.  Pico cebador: Si</p>
-                <p class="texto-contact"><span>$10.000</span></p>
-                <button type="button" id="agregar-termo" class="btn btn-primary">Agregar al carrito</button>
-            </div>
-            <div class="box-contact">
-                <img src="./img termos/termorosa.img" alt="" width="100%">
-                <p class="texto-contact"><strong>Termo simil Lumilagro rosa</strong></p>
-                <p class="texto-contact">Capacidad:   Medio litro.  Pico cebador: Si</p>
-                <p class="texto-contact"><span>$10.000</span></p>
-                <button type="button" id="agregar-termo" class="btn btn-primary">Agregar al carrito</button>
-            </div>
-            <div class="box-contact">
-                <img src="./img termos/termonegro.img" alt="" width="100%">
-                <p class="texto-contact"><strong>Termo simil Lumilagro negro</strong></p>
-                <p class="texto-contact">Capacidad:   Medio litro.  Pico cebador: Si</p>
-                <p class="texto-contact"><span>$10.000</span></p>
-                <button type="button" id="agregar-termo" class="btn btn-primary">Agregar al carrito</button>
-            </div>
-            <div class="box-contact">
-                <img src="./img termos/termolila.img" alt="" width="100%">
-                <p class="texto-contact"><strong>Termo simil Lumilagro lila</strong></p>
-                <p class="texto-contact">Capacidad:   Medio litro.  Pico cebador: Si</p>
-                <p class="texto-contact"><span>$10.000</span></p>
-                <button type="button" id="agregar-termo" class="btn btn-primary">Agregar al carrito</button>
-            </div>
-            <div class="box-contact">
-                <img src="./img termos/termoamarillo.img" alt="" width="100%">
-                <p class="texto-contact"><strong>Termo simil Lumilagro amarillo</strong></p>
-                <p class="texto-contact">Capacidad:   Medio litro.  Pico cebador: Si</p>
-                <p class="texto-contact"><span>$10.000</span></p>
-                <button type="button" id="agregar-termo" class="btn btn-primary">Agregar al carrito</button>
-            </div>
-            <div class="box-contact">
-                <img src="./img termos/termomarron.img" alt="" width="100%">
-                <p class="texto-contact"><strong>Termo simil Lumilagro marron</strong></p>
-                <p class="texto-contact">Capacidad:   Medio litro.  Pico cebador: Si</p>
-                <p class="texto-contact"><span>$10.000</span></p>
-                <button type="button" id="agregar-termo" class="btn btn-primary">Agregar al carrito</button>
-            </div>
+                    <img src="img termos/dibu-img.jpg" alt="" width="100%">
+                    <p class="texto-contact"><strong>Termo acero inoxidable estampado Dibu Martinez</strong></p>
+                    <p class="texto-contact" ><div class="envio"><strong>ENVIO GRATIS</strong></div></p>
+                    <p class="texto-contact"><span>$15.000</span></p>
+                    <button type="button" class="btn btn-danger" data-id="3">Agregar al carrito</button>
+                </div>
+                <div class="box-contact">
+                    <img src="img termos/termo-verde-agua-img.jpg" alt="" width="100%">
+                    <p class="texto-contact"><strong>Termo simil Lumilagro verde agua</strong></p>
+                    <p class="texto-contact"><div class="envio"><strong>ENVIO GRATIS</strong></div></p>
+                    <p class="texto-contact"><span>$10.000</span></p>
+                    <button type="button" class="btn btn-danger" data-id="4">Agregar al carrito</button>
+                </div>
+                <div class="box-contact">
+                    <img src="./img termos/termoazulclaro.img" alt="" width="100%">
+                    <p class="texto-contact"><strong>Termo simil Lumilagro azul claro</strong></p>
+                    <p class="texto-contact"><div class="envio"><strong>ENVIO GRATIS</strong></div></p>
+                    <p class="texto-contact"><span>$10.000</span></p>
+                    <button type="button" class="btn btn-danger" data-id="5">Agregar al carrito</button>
+                </div>
+                <div class="box-contact">
+                    <img src="./img termos/termorosa.img" alt="" width="100%">
+                    <p class="texto-contact"><strong>Termo simil Lumilagro rosa</strong></p>
+                    <p class="texto-contact"><div class="envio"><strong>ENVIO GRATIS</strong></div></p>
+                    <p class="texto-contact"><span>$10.000</span></p>
+                    <button type="button" class="btn btn-danger" data-id="6">Agregar al carrito</button>
+                </div>
+                <div class="box-contact">
+                    <img src="./img termos/termonegro.img" alt="" width="100%">
+                    <p class="texto-contact"><strong>Termo simil Lumilagro negro</strong></p>
+                    <p class="texto-contact"><div class="envio"><strong>ENVIO GRATIS</strong></div></p>
+                    <p class="texto-contact"><span>$10.000</span></p>
+                    <button type="button" class="btn btn-danger" data-id="7">Agregar al carrito</button>
+                </div>
+                <div class="box-contact">
+                    <img src="img termos/termo-lila.img" alt="" width="100%">
+                    <p class="texto-contact"><strong>Termo simil Lumilagro lila</strong></p>
+                    <p class="texto-contact"><div class="envio"><strong>ENVIO GRATIS</strong></div></p>
+                    <p class="texto-contact"><span>$10.000</span></p>
+                    <button type="button" class="btn btn-danger"data-id="8" >Agregar al carrito</button>
+                </div>
+                <div class="box-contact">
+                    <img src="./img termos/termoamarillo.img" alt="" width="100%">
+                    <p class="texto-contact"><strong>Termo simil Lumilagro amarillo</strong></p>
+                    <p class="texto-contact"><div class="envio"><strong>ENVIO GRATIS</strong></div></p>
+                    <p class="texto-contact"><span>$10.000</span></p>
+                    <button type="button" class="btn btn-danger"data-id="9" >Agregar al carrito</button>
+                </div>
+                <div class="box-contact">
+                    <img src="./img termos/termomarron.img" alt="" width="100%">
+                    <p class="texto-contact"><strong>Termo simil Lumilagro marron</strong></p>
+                    <p class="texto-contact"><div class="envio"><strong>ENVIO GRATIS</strong></div></p>
+                    <p class="texto-contact"><span>$10.000</span></p>
+                    <button type="button" class="btn btn-danger" data-id="10">Agregar al carrito</button>
+                </div>
             
-        </div> 
-        <div div="carrito">
-
-            <table id="lista-carrito" class="u-full-width">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                    </tr>
-                </thead>
+            </div> 
+            <div class="carrito">
+                <table id="lista-carrito" class="u-full-width">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
                 <tbody></tbody>
-
-            </table>
-            
+                </table>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    
+                    <button class="btn btn-secondary" type="button">VACIAR CARRITO</button>
+                  </div>
+            </div>    
         </div> 
     </main>
     <footer class="footertexto">
-            <p>Página oficial de "LA PÁGINA DEL TERMO. Proyecto final de Lopez Cristian. 2023</p>
+            <p>Página oficial de "TERMOS.COM". Proyecto final de Lopez Cristian. 2023</p>
 
     </footer>
       

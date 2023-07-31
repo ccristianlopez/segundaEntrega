@@ -1,106 +1,114 @@
+.box-header{
+  
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background-color: rgb(0, 0, 0);
+}
 .titulo{
-  padding-top: 1.50rem;
+  font-family: 'Dangrek', cursive;
+font-family: 'Josefin Sans', sans-serif;
+
+  width: 100%;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  height: 15%;
+  font-size: 250px;
+  background-color: black;
   
-    text-align: center;
-    font-size: 22px;
-    font-family: 'Open Sans', sans-serif;
-    position: fixed;
-    background-color: white;
-    width: 70%;
-}
-.tittle{
-  
-  margin-right: 15rem;
-  padding-bottom: 60px;
+  color: white; 
 }
 
-nav {
-    height: 5rem;
-    position: fixed;
-    width: 100%;
-    padding-top: 9rem;
-    
-  }
-  
-  nav .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-top: -0.50rem;
-    width: 80%;
-    
-    font-size: 15px;
-    font-family: 'Varela Round', sans-serif;
-    list-style: none;
-    text-decoration: none;
-    background-color: white
-    
-  }
-  
-  nav .menu a {
-    color: black;
-    padding: 20px;
-    list-style: none;
-    text-decoration: none;
-  }
-  
-  nav li {
-    padding-bottom: 13px;
-  }
 
-  .cuerpo{
+.text{
+  position: absolute;
+  top:10%;
+  left:10%;
+
+  transform: translate(-50%, 50%);
+}
+
+.tienda-p{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 50px;
+  padding-left: 30px;
+}
+.inicio-p{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+  padding-left: 1rem;
+}
+
+.menu-info{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 25px;
+  margin: 4px;
+  font-size: 20px;
+  font-family: 'Varela Round', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  
+}
+
+
+.navi{
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  padding: 20px;
+  list-style: none;
+  text-decoration: none;
+
+}
+a{
+  color: rgb(179, 73, 73);
+}
+.cuerpo{
     padding-top: 100px;
-  }
-
-  main .container {
-    padding-top: 10rem;
-    display: -ms-grid;
+}
+  
+.super-box{
     display: grid;
-    -ms-grid-columns: 50% 50%;
-    grid-template-columns: 50% 50%;
-    width: 60%;
-    
-   
-  }
+    grid-template-columns: 70% 30%;
+}
 
   main .box-contact {
-    border: 1px solid #aaaaaa;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border: 1px solid #cecccc;
+    border-color: 20px;
+    
     margin-top: 4rem;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
     -webkit-box-shadow: 1px 5px #d8d8d8;
     box-shadow: 1px 5px #d8d8d8;
     text-align: center;
     padding-bottom: 5rem;
     height:80%;
+    
   }
   
   main .texto-contact {
     padding: 3px;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'Shippori Antique B1', sans-serif;
   }
 
   #lista-termos{
-    display: -ms-grid;
+  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 82% 17%;
-      grid-template-columns: 70% 30%;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding-bottom: 30px;
+  grid-template-columns: 30% 30% 30%;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  
+  
   }
 
   footer{
@@ -131,10 +139,35 @@ nav {
   }
 
 #lista-carrito{
-  position: fixed;
-  padding-top: 200px;
+  
+  
   margin-right: 3rem;
+  background-color: transparent;
 }
+.carrito{
+  padding-top: 2rem;
+  color:black;
+  background-color: transparent;
+
+  border: 1px solid #cecccc;
+  border-color: 20px;
+  
+  margin-top: 4rem;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  -webkit-box-shadow: 1px 5px #d8d8d8;
+  box-shadow: 1px 5px #d8d8d8;
+  
+}
+
+.d-grid{
+  padding-top: 3rem;
+}
+
 
 th{
   padding-left: 1rem;
@@ -152,11 +185,23 @@ tbody{
   text-align: center;
 }
 
-.button-u-full-whidth{
-  color: red;
-}
 
 #btn-enviar{
   padding-top: 2rem;
   padding-left: 12rem;
 }
+
+.envio{
+  color: rgb(56, 202, 56)
+}
+
+#agregar-termo{
+  
+  font-size: 13px;
+  
+}
+
+.btn-danger{
+  font-size: 14px;
+}
+

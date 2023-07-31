@@ -238,7 +238,7 @@ function cargarEventListeners(){
 
 //FUNCIONES
 function agregarTermo(e){
-  if(e.target.classList.contains(`btn-primary`)){
+  if(e.target.classList.contains(`btn-danger`)){
   const termoSeleccionado= e.target.parentElement;
   leerDatosTermo(termoSeleccionado)
   };
@@ -252,14 +252,30 @@ function leerDatosTermo(termo){
   const infoTermo={
   nombre: termo.querySelector(`strong`).textContent,
   precio: termo.querySelector(`span`).textContent,
+  id:termo.querySelector(`button`).getAttribute(`data-id`),
   cantidad: 1
   }
 
   //Revisa si un elemento ya existe en un carrito
-  const existe= articulosCarrito.some
+  const existe= articulosCarrito.some(termo=>termo.id===infoTermo.id);
+  if
+    (existe){
+      const termos=articulosCarrito.map(termo=>{
+      if(termo.id===infoTermo.id){
+        termo.cantidad++;
+        return termo;
+      
+      }else{
+        return termo;
+      }
+      });
+      articulosCarrito=[...termos];
+  }else{
+    articulosCarrito=[...articulosCarrito, infoTermo];
+  }
 
   //Agrega elementos al array carrito 
-  articulosCarrito=[...articulosCarrito, infoTermo];
+  //articulosCarrito=[...articulosCarrito, infoTermo];
 
   console.log(articulosCarrito);
 
@@ -286,7 +302,7 @@ function carritoHtml(){
         ${termo.cantidad}
     </td>
     <td>
-        <a href="#" class="button u-full-whidth"> >Eliminar<
+        <a href="#" class="button u-full-whidth" data-id"${termo.id}" </a>>Eliminar<</a>
     </td>
     `;
 
