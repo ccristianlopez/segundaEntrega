@@ -225,15 +225,14 @@ cargarEventListeners();
 function cargarEventListeners(){
   seleccionarTermo.addEventListener(`click`, agregarTermo);
 
-  
+  carrito.addEventListener(`click`, eliminarTermo);
 
-
-  //Muestra los cursos de Local storage
+  //Muestra los cursos de Local Storage
   document.addEventListener(`DOMContentLoaded`, ()=>{
-    articulosCarrito=JSON.parse(localStorage.getItem(`carrito`)) || [];
-    carritoHtml();
-  })
-}
+  articulosCarrito=JSON.parse(localStorage.getItem(`carrito`)) || [];
+  carritoHtml();
+    })
+  }
 
 
 //FUNCIONES
@@ -243,6 +242,11 @@ function agregarTermo(e){
   leerDatosTermo(termoSeleccionado)
   };
 }  
+
+function eliminarTermo(){
+  console.log(`eliminarTermo`);
+};
+
 
 //LEER el contenido del html al que lé dimos click
 function leerDatosTermo(termo){
@@ -321,3 +325,4 @@ function sicronizarStorage(){
   function limpiarHtml(){
   contenedorCarrito.innerHTML=``;
 }
+
