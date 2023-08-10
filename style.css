@@ -22,10 +22,6 @@ h1{
   font-size: 46px;
   
 }
-#notificaciones{
-  text-align: center;
-  
-}
 
 .text{
   display: block;
@@ -63,7 +59,7 @@ h1{
 
 .navi{
   font-family: 'Josefin Sans', sans-serif;
-  color: rgb(243, 175, 175);
+  color: rgb(236, 157, 219);
   
   list-style: none;
   text-decoration: none;
@@ -86,9 +82,9 @@ a{
   main .box-contact {
     border: 1px solid #cecccc;
     border-color: 20px;
-    background-color: #f0e5e5;
+    background-color: #f5f5f5;
     margin-top: 2rem;
-    padding-top: 2rem;
+    
     padding-bottom: 30px;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -98,12 +94,12 @@ a{
     box-shadow: 1px 5px #d8d8d8;
     text-align: center;
     padding-bottom: 5rem;
-    height:80%;
+    height:100%
     
   }
   
   main .texto-contact {
-    padding: 3px;
+    
     text-align: center;
     font-size: 14px;
     font-family: 'Shippori Antique B1', sans-serif;
@@ -126,6 +122,7 @@ a{
         -ms-flex-pack: center;
             justify-content: center;
     padding-top: 25px;
+    padding-left: 1rem;
     margin: 4px;
     font-size: 13px;
     font-family: 'Varela Round', sans-serif;
@@ -201,7 +198,15 @@ tbody{
 }
 
 .envio{
-  color: rgb(56, 202, 56)
+  color: rgb(56, 202, 56);
+  font-size: 27px;
+  
+}
+
+span{
+
+font-size: 27px;
+color: gray;
 }
 
 #agregar-termo{
@@ -214,6 +219,11 @@ tbody{
   font-size: 14px;
   -webkit-box-shadow: 1px 5px #d4d4d4;
           box-shadow: 1px 5px #d4d4d4;
+  height: 70px;
+  width: 140px;
+  font-size: 18px;
+  
+  
 }
 
 

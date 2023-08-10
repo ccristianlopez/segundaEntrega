@@ -7,16 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const listaTermos = document.querySelector(`#lista-termos`);
   let articulosCarrito = [];
 
-  const notificarBtn=document.querySelector(`#notificar`);
-  const verNotificaciones=document.querySelector(`.verNotificaciones`);
-  
   
   cargarEventListeners();
-    notificarBtn.addEventListener(`click`, ()=>{
-    Notification.requestPermission()
-    
-    })
-
     
   
   //cargarEventListeners();
@@ -60,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function eliminarTermo(e) {
-    if (e.target.classList.contains("btn-danger")) {
+    if (e.target.classList.contains("btn-dange")) {
       const termoId = e.target.getAttribute("data-id");
       articulosCarrito = articulosCarrito.filter(
         (termo) => termo.id !== termoId
@@ -84,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <td>${termo.precio}</td>
         <td>${termo.cantidad}</td>
         <td>
-            <button class="btn btn-danger" data-id="${termo.id}">X</button>
+            <button class="btn btn-dange" data-id="${termo.id}">X</button>
         </td>
         `;
       contenedorCarrito.appendChild(row);
@@ -104,6 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // cargar items del local storage
   articulosCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
   carritoHtml();
+
+  
+
 
 });
 

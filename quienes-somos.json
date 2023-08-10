@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cristian Lopez",
+        "puesto": "desarrollador"
+        
+    },
+    {
+        "id": 2,
+        "nombre": "Daiana Perez",
+        "puesto": "recursos humanos"
+    },
+    {
+        "id": 3,
+        "nombre": "Carolina Gomez",
+        "puesto": "ventas"
+    },
+    {
+        "id": 4,
+        "nombre": "Lucas Martinez",
+        "puesto": "diseñador"
+    },
+    {
+        "id": 5,
+        "nombre": "Lourdes Gonzalez",
+        "puesto": "contacto"
+    },
+    {
+        "id": 6,
+        "nombre": "Gabriel Vazquez",
+        "puesto": "encargado de proyecto"
+    }
+]
