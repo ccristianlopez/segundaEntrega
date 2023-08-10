@@ -18,6 +18,10 @@ font-family: 'Josefin Sans', sans-serif;
   color: white; 
 }
 
+#notificaciones{
+  text-align: right;
+  padding-right: 1rem;
+}
 
 .text{
   position: absolute;
@@ -128,14 +132,14 @@ a{
   }
 
   #jbl{
-    padding-top: 200px;
-    padding-left: 175px;
-    padding-right: 175px;
+    padding-top: 100px;
+    padding-left: 250px;
+    padding-right: 250px;
   }
   #jbl-mensaje{
     padding-top: 25px;
-    padding-left: 175px;
-    padding-right: 175px;
+    padding-left: 250px;
+    padding-right: 250px;
   }
 
 #lista-carrito{
@@ -189,6 +193,8 @@ tbody{
 #btn-enviar{
   padding-top: 2rem;
   padding-left: 12rem;
+  
+
 }
 
 .envio{
@@ -204,4 +210,5 @@ tbody{
 .btn-danger{
   font-size: 14px;
 }
+
 
