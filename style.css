@@ -215,15 +215,25 @@ color: gray;
   
 }
 
-.btn-danger{
-  font-size: 14px;
-  -webkit-box-shadow: 1px 5px #d4d4d4;
-          box-shadow: 1px 5px #d4d4d4;
-  height: 70px;
-  width: 140px;
+
+
+.texto{
+  padding: 2rem;
   font-size: 18px;
-  
+}
+
+.contenido{
+  display: inline-block;
+  font-size: 20px;
+  text-align: center;
   
 }
 
+
+@media screen and (min-width: 550px) {
+  .menu {
+    display: grid;
+    text-align: center;
+  }
+}
 

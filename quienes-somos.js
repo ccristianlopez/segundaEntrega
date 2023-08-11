@@ -1,22 +1,31 @@
-document.addEventListener("DOMContentLoaded", () => {
-//const getEmpleados= async()=>{
-//    const respuesta= await fetch("/quienes-somos.json")
-//    return await respuesta.json()
-//}
+document.addEventListener("DOMContentLoaded", obtenerDatos => {
 
-//const empleados= getEmpleados()
-//console.log(empleados)
-//const cargarJsonArray= document.querySelector(`#cargarJsonArray`);
+    const cargarJsonArrayBtn= document.querySelector(`#cargarJsonArray`);
+    cargarJsonArrayBtn.addEventListener(`click`,obtenerDatos)
 
+    function obtenerDatos(){
+        const url= `/quienes-somos.json`;
 
-const getEmpleados = async () => {
-	const respuesta = await fetch(`/quienes-somos.json`);
-	let empleados = await respuesta.json();
-	console.log(empleados);
-};
+	    fetch(url)
+	        .then(respuesta=>respuesta.json())
+		    .then(resultado=>mostrarHTML(resultado));
+    }
 
-getEmpleados();
+	function mostrarHTML(empleados){
+		const contenido=document.querySelector(`.contenido`);
 
+		let html=``;
 
+		empleados.forEach(empleado=>{
+			const {id, nombre, puesto }=empleado;
 
+			html+=`
+                <p class="gente">Empleado: ${nombre}</p>
+				<p class="gente">Puesto: ${puesto}</p>
+
+			`;
+		})
+
+		contenido.innerHTML=html;
+	};
 });
