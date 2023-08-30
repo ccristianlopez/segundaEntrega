@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "Nombre":"Lourdes Quiroz",
+        "trabajo": "Prensa",
+        "img":"data/ulu.jpg"
+    },
+    {
+        "id":2,
+        "Nombre":"Cristian Lopez",
+        "trabajo":"Desarrollador",
+        "img":"data/cris.jpg"
+    },
+    {
+        "id":3,
+        "Nombre":"Gabriel Quito",
+        "trabajo":"Logística",
+        "img":"data/quito.jpg"
+    },
+    {
+        "id":4,
+        "Nombre":"Carolina Reverter",
+        "trabajo":"Diseño",
+        "img": "data/caro.jpg"
+    },
+    {
+        "id":5,
+        "Nombre":"Daiana Enriquez",
+        "trabajo":"Recursos humanos",
+        "img": "data/dai.jpg"
+    },
+    {
+        "id":6,
+        "Nombre":"Lucas Oliverio",
+        "trabajo":"Finanzas",
+        "img":"data/lucas.jpg"
+    }
+]
